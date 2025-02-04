@@ -2,8 +2,8 @@
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
-- HelloWorldFunction/src/main - Code for the application's Lambda function.
-- events - Invocation events that you can use to invoke the function.
+- JAVA - Code for the application's Lambda function.
+- handlers - Invocation events that you can use to invoke the function.
 - HelloWorldFunction/src/test - Unit tests for the application code. 
 - template.yaml - A template that defines the application's AWS resources.
 
@@ -12,17 +12,13 @@ The application uses several AWS resources, including Lambda functions and an AP
 If you prefer to use an integrated development environment (IDE) to build and test your application, you can use the AWS Toolkit.  
 The AWS Toolkit is an open source plug-in for popular IDEs that uses the SAM CLI to build and deploy serverless applications on AWS. The AWS Toolkit also adds a simplified step-through debugging experience for Lambda function code. See the following links to get started.
 
-* [CLion](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [GoLand](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [IntelliJ](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [WebStorm](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [Rider](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [PhpStorm](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [PyCharm](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [RubyMine](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [DataGrip](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [VS Code](https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/welcome.html)
-* [Visual Studio](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/welcome.html)
+* [AWS](https://aws.amazon.com/console/)
+* [HikariCP](https://github.com/brettwooldridge/HikariCP)
+* [jOOq](https://www.jooq.org)
+* [JAVA](https://www.java.com/en/)
+* [Jersey RESTful JAX-RS](https://github.com/eclipse-ee4j/jersey)
+* [Quarkus](https://quarkus.io)
+* [Postgres](https://www.postgresql.org)
 
 ## Deploy the sample application
 
@@ -60,32 +56,6 @@ Build your application with the `sam build` command.
 inventario-app$ sam build
 ```
 
-The SAM CLI installs dependencies defined in `HelloWorldFunction/pom.xml`, creates a deployment package, and saves it in the `.aws-sam/build` folder.
-
-Test a single function by invoking it directly with a test event. An event is a JSON document that represents the input that the function receives from the event source. Test events are included in the `events` folder in this project.
-
-Run functions locally and invoke them with the `sam local invoke` command.
-
-```bash
-inventario-app$ sam local invoke HelloWorldFunction --event events/event.json
-```
-
-The SAM CLI can also emulate your application's API. Use the `sam local start-api` to run the API locally on port 3000.
-
-```bash
-inventario-app$ sam local start-api
-inventario-app$ curl http://localhost:3000/
-```
-
-The SAM CLI reads the application template to determine the API's routes and the functions that they invoke. The `Events` property on each function's definition includes the route and method for each path.
-
-```yaml
-      Events:
-        HelloWorld:
-          Type: Api
-          Properties:
-            Path: /hello
-            Method: get
 ```
 
 ## Add a resource to your application
@@ -97,20 +67,8 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 
 `NOTE`: This command works for all AWS Lambda functions; not just the ones you deploy using SAM.
 
-```bash
-inventario-app$ sam logs -n HelloWorldFunction --stack-name inventario-app --tail
-```
-
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
 
-## Unit tests
-
-Tests are defined in the `HelloWorldFunction/src/test` folder in this project.
-
-```bash
-inventario-app$ cd HelloWorldFunction
-HelloWorldFunction$ mvn test
-```
 
 ## Cleanup
 
