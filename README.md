@@ -21,7 +21,7 @@ The AWS Toolkit is an open source plug-in for popular IDEs that uses the SAM CLI
 * [Postgres](https://www.postgresql.org)
 * [Quarkus](https://quarkus.io)
 
-![Screenshot](Screenshot 2025-02-04 172108.png)
+![Screenshot](Screenshot_2025-02-04_172108.png)
 
 ## Deploy the sample application
 
