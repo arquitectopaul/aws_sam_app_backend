@@ -78,17 +78,12 @@ To delete the sample application that you created, use the AWS CLI. Assuming you
 sam delete --stack-name inventario-app
 ```
 
-Key                 SecretArn
-Description         The Managed Secret ARN
-Value               arn:aws:secretsmanager:us-east-1:545200407638:secret:RDSSecret-YTTfKIESuRxN-7dOa8s
+| **Key**                 | **Description**                                      | **Value**                                                                                           |
+|-------------------------|------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| **SecretArn**            | The Managed Secret ARN                               | arn:aws:secretsmanager:us-east-1:545200407638:secret:RDSSecret-YTTfKIESuRxN-7dOa8s                |
+| **RDSInstanceEndpoint**  | Endpoint de la instancia de RDS PostgreSQL           | inventario-app-rdsinstance-7k0uja1mhmk0.ck7yyhzddoi1.us-east-1.rds.amazonaws.com                   |
+| **ApiEndpoint**          | API Gateway endpoint URL for Prod stage             | https://zvz5idgfi8.execute-api.us-east-1.amazonaws.com/prod                                          |
 
-Key                 RDSInstanceEndpoint
-Description         Endpoint de la instancia de RDS PostgreSQL
-Value               inventario-app-rdsinstance-7k0uja1mhmk0.ck7yyhzddoi1.us-east-1.rds.amazonaws.com
-
-Key                 ApiEndpoint
-Description         API Gateway endpoint URL for Prod stage
-Value               https://zvz5idgfi8.execute-api.us-east-1.amazonaws.com/prod
 
 ![Diagrama](inventario-composer.yaml.png)
 
