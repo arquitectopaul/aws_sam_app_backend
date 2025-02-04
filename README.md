@@ -4,7 +4,7 @@ This project contains source code and supporting files for a serverless applicat
 
 - JAVA - Code for the application's Lambda function.
 - handlers - Invocation events that you can use to invoke the function.
-- HelloWorldFunction/src/test - Unit tests for the application code. 
+- database.sql - RDS sql code E-R. 
 - template.yaml - A template that defines the application's AWS resources.
 
 The application uses several AWS resources, including Lambda functions and an API Gateway API. These resources are defined in the `template.yaml` file in this project. You can update the template to add AWS resources through the same deployment process that updates your application code.
@@ -17,8 +17,11 @@ The AWS Toolkit is an open source plug-in for popular IDEs that uses the SAM CLI
 * [jOOq](https://www.jooq.org)
 * [JAVA](https://www.java.com/en/)
 * [Jersey RESTful JAX-RS](https://github.com/eclipse-ee4j/jersey)
-* [Quarkus](https://quarkus.io)
+* [Keycloak](https://www.keycloak.org)
 * [Postgres](https://www.postgresql.org)
+* [Quarkus](https://quarkus.io)
+
+![Screenshot](Screenshot 2025-02-04 172108.png)
 
 ## Deploy the sample application
 
@@ -83,7 +86,6 @@ sam delete --stack-name inventario-app
 | **SecretArn**            | The Managed Secret ARN                               | arn:aws:secretsmanager:us-east-1:545200407638:secret:RDSSecret-YTTfKIESuRxN-7dOa8s                |
 | **RDSInstanceEndpoint**  | Endpoint de la instancia de RDS PostgreSQL           | inventario-app-rdsinstance-7k0uja1mhmk0.ck7yyhzddoi1.us-east-1.rds.amazonaws.com                   |
 | **ApiEndpoint**          | API Gateway endpoint URL for Prod stage             | https://zvz5idgfi8.execute-api.us-east-1.amazonaws.com/prod                                          |
-
 
 ![Diagrama](inventario-composer.yaml.png)
 
