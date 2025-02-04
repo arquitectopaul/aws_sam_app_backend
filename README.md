@@ -90,6 +90,8 @@ Key                 ApiEndpoint
 Description         API Gateway endpoint URL for Prod stage
 Value               https://zvz5idgfi8.execute-api.us-east-1.amazonaws.com/prod
 
+![Diagrama](inventario-composer.yaml.png)
+
 ## Resources
 
 See the [AWS SAM developer guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) for an introduction to SAM specification, the SAM CLI, and serverless application concepts.
