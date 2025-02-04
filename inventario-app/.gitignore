@@ -1,0 +1,6 @@
+target/
+.aws-sam/
+.idea/
+# Ignore backup files
+*.bak
+*.iml
